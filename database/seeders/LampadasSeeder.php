@@ -34,5 +34,10 @@ class LampadasSeeder extends Seeder
             'status' => 'OFF',
             'pin' => 6
         ]);
+        DB::table('lampadas')->insert([
+            'local' => 'Portao',
+            'status' => 'OFF',
+            'pin' => 2
+        ]);
     }
 }
