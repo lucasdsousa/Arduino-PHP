@@ -29,6 +29,8 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/test', [ArduinoController::class, 'index']);
+Route::get('/index', [ArduinoController::class, 'index'])->name('index');
+Route::post('/ligar/{id}', [ArduinoController::class, 'ligarLampada'])->name('ligar');
+Route::post('/desligar/{id}', [ArduinoController::class, 'desligarLampada'])->name('desligar');
 
 require __DIR__ . '/auth.php';
